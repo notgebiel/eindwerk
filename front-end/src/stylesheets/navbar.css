@@ -3,14 +3,14 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: RGB(87,92,148);
+    background-color: /*RGB(87,92,148)*/#922790;
   }
   
-  li {
+  #navli {
     float: left;
   }
 
-  li a {
+  #navli a {
     display: block;
     color: white;
     text-align: center;
@@ -18,10 +18,10 @@
     text-decoration: none;
   }
 
-  li a:hover {
-    background-color: #494D7B;
+  #navli a:hover {
+    background-color: #7E247C;
   }
 
   .active {
-    background-color: #494D7B;
+    background-color: #7E247C;
   }
