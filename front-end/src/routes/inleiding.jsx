@@ -14,7 +14,9 @@ export default function Inleiding() {
         De Front-end is alles wat je kan zien, bv. deze tekst, de navigatiebar bovenaan...<br/>
         De Back-end is alles wat je niet kan zien, bv. de server, de database... meer hierover in het Back-end hoofdstuk.<br/>
         </h4>
-        <button className={styles.button}>Volgend</button>
+        <div className={styles.button_div}>
+            <button className={styles.button}><a href="/front_end">Volgend</a></button>
+        </div>
         </>
     )
 }

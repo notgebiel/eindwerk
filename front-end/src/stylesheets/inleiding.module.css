@@ -19,6 +19,15 @@
     
 }
 
+.button a {
+    color: white;
+    text-decoration: none;
+}
+
 .button:hover {
     background-color: #7E247C;
+}
+
+.button_div {
+    text-align: center;
 }
