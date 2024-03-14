@@ -53,22 +53,45 @@ export default function Front_End() {
                     <br/>
                     <br/>
                     Voor de front-end te ontwikkelen kan je 3 talen gebruiken (het zijn er meer maar we houden het bij de basis).<br/>
-                    Je hebt HTML, CSS en Javascript.<br/>
-                    HTML is de structuur van de front-end, bv. deze tekst bestaat uit HTML.<br/>
+                    Je hebt HTML, CSS en Javascript.<br/><br/><br/><br/><br/>
+                    <div style={{ display: 'flex' }}>
+      <div style={{ flex: 1 }}>
+      HTML is de structuur van de front-end, bv. deze tekst bestaat uit HTML.<br/>
                     Een voorbeeld hiervan is de volgende zin: deze tekst.<br/>
                     Hieronder zie je hoe dit eruit ziet als je de website aan het ontwikkelen bent.<br/>
-                    <SyntaxHighlighter language="html" style={darcula}>{codeString1}</SyntaxHighlighter>
-                    <br/>
-                    Dit is maar 1 voorbeeld van een "HTML tag". Je hebt honderden verschillende tags, elk met hun eigen functie.<br/>
-                    <br/>
-                    Als je de structuur hebt, heb je natuurlijk ook de opmaak nodig, hiervoor gebruik je CSS.<br/>
+      </div>
+      <div style={{ flex: 1 }}>
+      <SyntaxHighlighter className={styles.shl} language="html" style={darcula}>{codeString1}</SyntaxHighlighter>
+
+      </div>
+    </div>
+                    <br/><br/>
+                    Dit is maar 1 voorbeeld van een "HTML tag".<br/> Je hebt honderden verschillende tags, elk met hun eigen functie.<br/>
+                    <br/><br/><br/><br/><br/>
+                    <div style={{ display: 'flex' }}>
+      <div style={{ flex: 1 }}>
+        <h4>Als je de structuur hebt, heb je natuurlijk ook de opmaak nodig, hiervoor gebruik je CSS.<br/>
                     CSS is heel gestructureerd en dus makkelijk te leren.<br/>
                     Stel nu dat ik deze tekst in het rood wil.<br/>
                     Dan gaan we naar het CSS bestand, dit CSS bestand eindigt altijd met .css, om aan te duiden dat dit een CSS bestand is.<br/>
-                    Er zijn veel verschillende manieren om dit te bereiken. Een voorbeeld hiervan is dit:<br/>
-                    <SyntaxHighlighter language="css" style={darcula}>{codeString2}</SyntaxHighlighter><br/>
-                    Het CSS bestand van de vorige pagina, zag er zo uit:<br/>
-                    <SyntaxHighlighter language="css" style={darcula}>{codeString3}</SyntaxHighlighter><br/>
+                    Er zijn veel verschillende manieren om dit te bereiken. Een voorbeeld hiervan is dit:</h4>
+      </div>
+      <div style={{ flex: 1 }}>
+      <SyntaxHighlighter className={styles.shl} language="css" style={darcula}>{codeString2}</SyntaxHighlighter><br/>
+      </div></div>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div style={{display: 'flex'}}>
+                        <div style={{flex: 1}}>
+                            <h3>Het CSS bestand van de vorige pagina, zag er zo uit:<br/>
+                                Dit beschrijft hoe de navigatiebalk eruit moet zien, hoe hij zich moet gedragen als het venster vergroot/verkleint, wat er moet gebeuren als je er met je muis over gaat, hoe de knop eruit moet zien en hoe die zich moet gedragen, en hoe de tekst eruit ziet.
+                            </h3>
+                        </div>
+                        <div style={{flex: 1}}>
+                            <SyntaxHighlighter className={styles.shl} language="css" style={darcula}>{codeString3}</SyntaxHighlighter>
+                        </div>
+                    </div>
                     
 
                 </h4>
@@ -76,3 +99,17 @@ export default function Front_End() {
         </>
     )
 }
+
+
+
+
+/*<div style={{ display: 'flex' }}>
+      <div style={{ flex: 1 }}>
+        <p>This is some descriptive text.</p>
+      </div>
+      <div style={{ flex: 1 }}>
+        <SyntaxHighlighter language="javascript" style={darcula}>
+          {codeString}
+        </SyntaxHighlighter>
+      </div>
+    </div>*/

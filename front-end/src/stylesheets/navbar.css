@@ -25,3 +25,9 @@
   .active {
     background-color: #7E247C;
   }
+
+  .navbardiv {
+    position: fixed;
+    top: 0;
+    width: 100%; 
+  }

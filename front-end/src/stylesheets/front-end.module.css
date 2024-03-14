@@ -1,8 +1,17 @@
 .header {
     text-align: center;
+    margin-top: 60px;
 }
 
 .text {
     padding: 16px;
     text-align: center;
+}
+
+.shl {
+    border-radius: 16px;
+}
+
+div {
+    align-items: center;
 }
