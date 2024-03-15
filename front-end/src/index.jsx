@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import ErrorPage from './routes/errorpage';
 import Inleiding from './routes/inleiding';
 import Front_End from './routes/front-end';
+import Back_End from './routes/back-end';
 
 //react router
 const router = createBrowserRouter([
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: '/front_end',
     element: <Front_End />,
+  },
+  {
+    path: '/back_end',
+    element: <Back_End />
   }
 ])
 

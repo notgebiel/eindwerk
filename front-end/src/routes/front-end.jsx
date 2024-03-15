@@ -1,4 +1,5 @@
-import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
+//import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import style from "react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark";
 import NavBar from "../components/navbar"
 import styles from '../stylesheets/front-end.module.css';
 import {Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
@@ -41,7 +42,31 @@ export default function Front_End() {
     .button_div {
         text-align: center;
     }`
+    const codeString4 = `const [active, setActive] = useState(props.active);
+
+    const handleItemClick = (item) => {
+        setActive(item);
+    };`    
+
+    const codeString5 = `export default function NavBar(props) {
+        const [active, setActive] = useState(props.active);
     
+        const handleItemClick = (item) => {
+            setActive(item);
+        };
+    
+        return (
+            <div className="navbardiv">
+                <ul className="navbarul">
+                    <li id="navli" className={active === 'Inleiding' ? 'active' : ''} onClick={() => handleItemClick('Inleiding')}><a href="/">Inleiding</a></li>
+                    <li id="navli" className={active === 'Front-End' ? 'active' : ''} onClick={() => handleItemClick('Front-End')}><a href="/front_end">Front-End</a></li>
+                    <li id="navli" className={active === 'Back-End' ? 'active' : ''} onClick={() => handleItemClick('Back-End')}><a  href="/back_end">Back-End</a></li>
+                </ul>
+            </div>
+        )
+    }
+    `
+
     return (
         <>
             <NavBar active='Front-End' />
@@ -89,9 +114,45 @@ export default function Front_End() {
                             </h3>
                         </div>
                         <div style={{flex: 1}}>
-                            <SyntaxHighlighter className={styles.shl} language="css" style={darcula}>{codeString3}</SyntaxHighlighter>
+                            <SyntaxHighlighter className={styles.shl} language="css" style={darcula}>{codeString3}</SyntaxHighlighter><br/><br/>
+
                         </div>
                     </div>
+                    <div style={{display: 'flex'}}>
+                        <div style={{flex: 1}}>
+                            <h4>
+                            Als laatste hebben we Javascript, dit dient voor de interactiviteit van de website.<br/>
+                            Bv. het veranderen van pagina als je op de knoppen boven drukt.<br/>
+                            Bovenaan in de navigatiebar zie je dat het venster dat de knop 'front-end' iets donkerder is dan de rest, dit is omdat je je daar nu bevindt.<br/>
+                            Dit is ook (deels) gedaan met Javascript, het Javascript gedeelte ziet er zo uit:<br/>
+                            </h4>
+                        </div>
+                        <div style={{flex: 1}}>
+                            <SyntaxHighlighter className={styles.shl} language="javascript" style={darcula}>{codeString4}</SyntaxHighlighter>
+                        </div>
+                    </div>
+                    <br/>
+                    <br/>
+                    <br/>
+                            
+                                
+                                    <h4>
+                                Je hebt verschillende tools om dit gemakkelijker en vooral sneller te maken.<br/>
+                            Als je niet goed weet wat je aan het doen bent, kan je de website zeer traag en onhandig maken.<br/>
+                            Voor de front-end gebruiken daarom veel mensen "React".<br/>
+                            React is een hulpmiddel in Javascript die je helpt om de front-end te ontwikkelen.<br/>
+                            Met react kan je elk stukje verdelen in componenten, deze componenten kan je appart gebruiken.<br/>
+                            Een voorbeeld hiervan is de navigatiebar bovenaan.<br/>
+                            Die is op elke pagina ongeveer hetzelfde (buiten de kleur die donkerder wordt als je op een knop drukt).<br/>
+                            Zonder React zou de webbrowser deze navigatiebar elke keer opnieuw inladen als je van pagina verandert,<br/> maar doordat ik React hebt gebruikt, wordt de navigatiebar maar 1 keer ingeladen, en blijft die ingeladen ook als je van pagina verandert.<br/>
+                            Dit is heel handig voor efficiënte laadtijden, databesparing en batterijbesparing.<br/>
+                            De code voor het React component dat voor de navigatiebar zorgt, ziet er zo uit:<br/>
+                            </h4>
+                                
+                                
+                                    <SyntaxHighlighter language="javascript" className={styles.shl} style={darcula}>{codeString5}</SyntaxHighlighter>
+                                
+                            
                     
 
                 </h4>
