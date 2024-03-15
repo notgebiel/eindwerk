@@ -3,10 +3,22 @@ const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 3001;
+const passport = require('./pp');
+const session = require('express-session');
+
 
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(session({
+    secret: 'secret',
+    resave: false,
+    saveUnitialized: false
+}));
+
+app.use(passport.initialize())
+app.use(passport.session())
 
 app.get('/', (req, res) => {
     res.send('hello from server');
