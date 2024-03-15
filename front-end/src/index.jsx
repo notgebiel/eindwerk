@@ -7,6 +7,8 @@ import ErrorPage from './routes/errorpage';
 import Inleiding from './routes/inleiding';
 import Front_End from './routes/front-end';
 import Back_End from './routes/back-end';
+import ServerPage from './routes/serverpage';
+import ReceiveData from './routes/receiveData';
 
 //react router
 const router = createBrowserRouter([
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
   {
     path: '/back_end',
     element: <Back_End />
+  },
+  {
+    path: '/server',
+    element: <ServerPage />
+  },
+  {
+    path: '/server/receive',
+    element: <ReceiveData />
   }
 ])
 
